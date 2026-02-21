@@ -128,7 +128,22 @@
 <footer>
   <p>© 2026 AO Digital - Tous droits réservés</p>
 </footer>
+    
+<script>
+const sections = document.querySelectorAll('.why, .testimonials');
 
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const position = section.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+
+        if (position < screenPosition) {
+            section.classList.add('show');
+        }
+    });
+});
+</script>
+    
 </body>
 </html>
 
