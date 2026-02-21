@@ -175,14 +175,31 @@ footer {
 }
 
 .why {
-  padding: 80px 20px;
-  text-align: center;
-  background: #f4f4f4;
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f4f4f4, #ffffff);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.why.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .testimonials {
-  padding: 80px 20px;
-  text-align: center;
+    padding: 100px 20px;
+    text-align: center;
+    background: #ffffff;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.testimonials.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .service-card {
