@@ -130,17 +130,22 @@
 </footer>
     
 <script>
-const sections = document.querySelectorAll('.why, .testimonials');
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll('.why, .testimonials');
 
-window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-        const position = section.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.2;
-
-        if (position < screenPosition) {
-            section.classList.add('show');
-        }
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
     });
+  }, {
+    threshold: 0.2
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
 });
 </script>
     
