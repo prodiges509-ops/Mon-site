@@ -216,17 +216,19 @@ footer {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-.btn {
-  background: #ff6600;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
+button, .btn {
+    background: linear-gradient(135deg, #ff7a18, #ffb347);
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.btn:hover {
-  background: #e05500;
-  transform: scale(1.05);
+button:hover, .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
 }
